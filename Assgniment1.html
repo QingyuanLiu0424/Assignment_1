@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" http-equive="Content-Type" charset="utf-8" rel="stylesheet" type="text/css"
+        content="width=device-width">
+    <title>Assginment_1</title>
+    <style>
+        .container {
+            margin-left: 20%;
+            display: flex;
+        }
+
+        ul,
+        ul a,
+        li,
+        li a {
+            text-decoration: none;
+            list-style: none;
+            color: #000;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .main1 {
+            display: block;
+            width: 50%;
+            height: 28px;
+            text-align: center;
+            line-height: 28px;
+        }
+
+        .content {
+            margin-top: 1px;
+            position: absolute;
+            left: -999px;
+            padding: 0;
+        }
+
+        .main:hover ul {
+            left: auto;
+        }
+
+        .inner {
+            display: inline-block;
+            height: 30px;
+            width: 80px;
+            padding: 0 10px;
+            line-height: 30px;
+        }
+
+        .inner:hover {
+            background-color: #ddd;
+        }
+
+        .main {
+            display: inline-block;
+        }
+
+        .welcome {
+            background-image: url('3.jpg');
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 1000px;
+            widows: 1200px;
+            widows: 2000px;
+        }
+
+        .welcome img {
+            max-width: 500px;
+        }
+
+        .align_word {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            font-size: 60px;
+            color: blanchedalmond;
+            height: 50%;
+            width: 50%;
+
+        }
+
+        .wrapper {
+            margin-top: 50px;
+            display: grid;
+            grid-template-areas:
+                'content_1 content_1'
+                'picture2'
+                'box-1 box-2 box-2'
+                'box-3'
+                'footer footer footer';
+            grid-gap: 2rem;
+            grid-auto-rows: minmax(100px, auto);
+            background-color: #eee;
+        }
+
+        .content_1 {
+            grid-area: content_1;
+            grid-template-rows: 60%;
+        }
+
+        .picture2 {
+            grid-area: picture2;
+            grid-auto-rows: minmax(100px, auto);
+        }
+
+        .box-1 {
+            grid-area: box-1;
+        }
+
+        .box-2 {
+            grid-area: box-2;
+        }
+
+        .box-3 {
+            grid-area: box-3;
+        }
+
+
+        footer {
+            width: 100%;
+            min-height: 30px;
+            padding: 20px 0 40px 20px;
+        }
+
+        footer .copyright {
+            top: -8px;
+            margin-right: 20px;
+            font-size: .75em;
+        }
+
+        footer ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        footer ul li {
+            display: inline-block;
+        }
+
+        a.social {
+            display: inline-block;
+            text-indent: -9999px;
+            margin-left: 5px;
+            width: 30px;
+            height: 30px;
+            background-size: 30px 30px;
+            opacity: .5;
+            transition: all .25s;
+        }
+
+        a.twitter {
+            background-image: url(images/twitter.svg);
+        }
+
+        a.linkedin {
+            background-image: url(images/linkedin.svg);
+        }
+
+        a.github {
+            background-image: url(images/github.svg);
+        }
+
+        a.social:hover {
+            opacity: 1;
+        }
+
+        @media (max-width:500px) {
+            .wrapper {
+                grid-template-areas:
+                    'content_1'
+                    'picture2'
+                    'box-1'
+                    'box-2'
+                    'box-3'
+                    'footer';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="main">
+            <a href="#" class="main1">Home</a>
+
+        </ul>
+
+        <ul class="main">
+            <a href="#" class="main1">Information</a>
+            <ul class="content">
+                <li><a class="inner" href="#">1</a></li>
+                <li><a class="inner" href="#">2</a></li>
+                <li><a class="inner" href="#">3</a></li>
+                <li><a class="inner" href="#">4</a></li>
+            </ul>
+        </ul>
+        <ul class="main">
+            <a href="#" class="main1">Eating</a>
+            <ul class="content">
+                <li><a class="inner" href="#">1</a></li>
+                <li><a class="inner" href="#">2</a></li>
+                <li><a class="inner" href="#">3</a></li>
+                <li><a class="inner" href="#">4</a></li>
+            </ul>
+        </ul>
+        <ul class="main">
+            <a href="#" class="main1">About</a>
+            <ul class="content">
+                <li><a class="inner" href="#">1</a></li>
+                <li><a class="inner" href="#">2</a></li>
+                <li><a class="inner" href="#">3</a></li>
+                <li><a class="inner" href="#">4</a></li>
+            </ul>
+        </ul>
+        <ul class="main">
+            <a href="#" class="main1">Contact</a>
+            <ul class="content">
+                <li><a class="inner" href="#">1</a></li>
+                <li><a class="inner" href="#">2</a></li>
+                <li><a class="inner" href="#">3</a></li>
+                <li><a class="inner" href="#">4</a></li>
+            </ul>
+        </ul>
+    </div>
+    <div class="welcome">
+        <p class="align_word">Welcome!</p>
+    </div>
+
+    <div class="wrapper">
+        <div class="content_1" style="font-size: initial; widows: 50%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis esse deserunt laudantium
+            cupiditate, possimus ut nihil quos earum quidem quisquam alias hic quae error id. 
+        </div>
+        <div><img src="2.jpg" width=90%% height="600px" class="picture2"></div>
+        <div class="box-1">
+            <p>The Midwest region had another strong sales year with record-setting sales of both the M300-25 and
+                M100-11 models. The only disappointment was the lackluster sales of the M300-15 model.
+            </p>
+        </div>
+        <div><img class="box-2" src="1.jpg"></div>
+        <div class='box-3' style="font-size: initial; width:30%;">  
+            <p>The Midwest region had another strong sales year with record-setting sales of both the M300-25 and
+                M100-11 models. The only disappointment was the lackluster sales of the M300-15 model, which started the
+                year strong but tapered off into the fourth quarter. All-in-all though, avery good year for the Midwest
+                region.
+        
+            </p>
+        </div>
+        <footer class="footer">
+            <ul>
+                <li><a href="#" class="social twitter">Twitter</a></li>
+                <li><a href="#" class="social github">Github</a></li>
+                <li><a href="#" class="social linkedin">Linkedin</a></li>
+            </ul>
+            <p class="copyright">@Copyright</p>
+        </footer>
+    </div>
+</body>
+
+</html>
